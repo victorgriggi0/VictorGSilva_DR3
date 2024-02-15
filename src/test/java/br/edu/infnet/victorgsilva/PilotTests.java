@@ -23,9 +23,8 @@ class PilotTests {
 	
 	@Test
 	void pilotShouldBeJunior() {
-        pilot.setFlightHours(1000);
+        pilot.setFlightHours(1500);
         
-        // Irá fazer a verificação para analisar se o status é "Júnior"
         assertFalse(pilot.isSeniorPilot());
         assertEquals("Júnior", pilot.getStatus());
 	}
@@ -34,7 +33,6 @@ class PilotTests {
     void pilotShouldBeSenior() {
         pilot.setFlightHours(2000);
         
-        // Irá fazer a verificação para analisar se o status é "Sênior"
         assertTrue(pilot.isSeniorPilot());
         assertEquals("Sênior", pilot.getStatus());
     }
