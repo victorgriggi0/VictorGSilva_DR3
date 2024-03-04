@@ -1,10 +1,25 @@
 package br.edu.infnet.victorgsilva.model.domain;
 
 public class Pilot {
+	
     private String name;
     private int age;
     private String license;
     private int flightHours;
+    
+    public Pilot(String name, int age, String license, int flightHours) {
+    	this.setName(name);
+    	this.setAge(age);
+    	this.setLicense(license);
+    	this.setFlightHours(flightHours);
+    }
+    
+	@Override
+	public String toString() {
+		
+		return "Piloto: " + name + ", Idade: " + age + ", Licença: " + license + ", Horas de Vôo: " + flightHours;
+		
+	}
     
 	public String getName() {
 		return name;
@@ -38,26 +53,4 @@ public class Pilot {
 		this.flightHours = flightHours;
 	}
 	
-	// Atribui o status de "Sênior" caso o piloto tenha mais de 1500 horas de vôo
-    public boolean isSeniorPilot() {
-        if (flightHours < 0) {
-            throw new IllegalArgumentException("Oops! As horas de vôo não podem ser negativas...");
-        }
-        
-        return flightHours > 1500;
-    }
-    
-    // Verifica o status do piloto, tendo como base o retorno de "isSeniorPilot()"
-    public String getStatus() {
-        try {
-            if (isSeniorPilot()) {
-                return "Sênior";
-            } else {
-                return "Júnior";
-            }
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
-            return "Status Indisponível";
-        }
-    }
 }
