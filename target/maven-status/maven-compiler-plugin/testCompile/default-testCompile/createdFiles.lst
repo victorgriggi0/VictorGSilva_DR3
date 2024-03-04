@@ -1,0 +1,6 @@
+br\edu\infnet\victorgsilva\service\AirportServiceTests.class
+br\edu\infnet\victorgsilva\domain\AdressTest.class
+br\edu\infnet\victorgsilva\domain\AirportTests.class
+br\edu\infnet\victorgsilva\service\PilotServiceTests.class
+br\edu\infnet\victorgsilva\service\AdressServiceTests.class
+br\edu\infnet\victorgsilva\domain\PilotTests.class
